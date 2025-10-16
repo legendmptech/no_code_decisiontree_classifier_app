@@ -1,0 +1,2722 @@
+{
+  "type": "node",
+  "feature": "ST_Slope",
+  "gain": 0.2993210853898228,
+  "children": [
+    {
+      "value": "Up",
+      "subtree": {
+        "type": "node",
+        "feature": "ChestPainType",
+        "gain": 0.1656713430532605,
+        "children": [
+          {
+            "value": "ATA",
+            "subtree": {
+              "type": "node",
+              "feature": "RestingECG",
+              "gain": 0.04548637762473826,
+              "children": [
+                {
+                  "value": "Normal",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "Sex",
+                    "gain": 0.005980992550474948,
+                    "children": [
+                      {
+                        "value": "M",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.00168313776660646,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0.0011637331887217744,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 59,
+                                      "classCounts": {
+                                        "0": 58,
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 3
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 61,
+                                  "1": 1
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 5,
+                                "classCounts": {
+                                  "0": 5
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 66,
+                            "1": 1
+                          }
+                        }
+                      },
+                      {
+                        "value": "F",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "0",
+                          "count": 35,
+                          "classCounts": {
+                            "0": 35
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 101,
+                      "1": 1
+                    }
+                  }
+                },
+                {
+                  "value": "ST",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "FastingBS",
+                    "gain": 0.14501030849729774,
+                    "children": [
+                      {
+                        "value": "0",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "0",
+                          "count": 18,
+                          "classCounts": {
+                            "0": 18
+                          }
+                        }
+                      },
+                      {
+                        "value": "1",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "Sex",
+                          "gain": 0.251629167387823,
+                          "children": [
+                            {
+                              "value": "F",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 1,
+                                "classCounts": {
+                                  "0": 1
+                                }
+                              }
+                            },
+                            {
+                              "value": "M",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 2,
+                            "1": 1
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 20,
+                      "1": 1
+                    }
+                  }
+                },
+                {
+                  "value": "LVH",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "ExerciseAngina",
+                    "gain": 0.046491569234221874,
+                    "children": [
+                      {
+                        "value": "N",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.04670193021289598,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 0.05878020304107956,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 9,
+                                      "classCounts": {
+                                        "0": 7,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 9,
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 1,
+                                "children": [
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "0": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 10,
+                            "1": 3
+                          }
+                        }
+                      },
+                      {
+                        "value": "Y",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "0",
+                          "count": 2,
+                          "classCounts": {
+                            "0": 2
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 12,
+                      "1": 3
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 133,
+                "1": 5
+              }
+            }
+          },
+          {
+            "value": "NAP",
+            "subtree": {
+              "type": "node",
+              "feature": "Sex",
+              "gain": 0.012523256844568717,
+              "children": [
+                {
+                  "value": "M",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "RestingECG",
+                    "gain": 0.009773481857061422,
+                    "children": [
+                      {
+                        "value": "Normal",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.04070732403298244,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0.006404117697611317,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 40,
+                                      "classCounts": {
+                                        "0": 38,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 4
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 42,
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0.0737613082228672,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 6,
+                                      "classCounts": {
+                                        "0": 5,
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 6,
+                                  "1": 2
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 48,
+                            "1": 4
+                          }
+                        }
+                      },
+                      {
+                        "value": "ST",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.03451070288373825,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": -5.551115123125783e-17,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 6,
+                                      "classCounts": {
+                                        "0": 5,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 5,
+                                  "1": 1
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 1,
+                                "classCounts": {
+                                  "0": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 6,
+                            "1": 1
+                          }
+                        }
+                      },
+                      {
+                        "value": "LVH",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.04841567590888557,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 5.551115123125783e-17,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 10,
+                                      "classCounts": {
+                                        "0": 8,
+                                        "1": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 8,
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 2,
+                                "classCounts": {
+                                  "0": 2
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 10,
+                            "1": 2
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 64,
+                      "1": 7
+                    }
+                  }
+                },
+                {
+                  "value": "F",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "RestingECG",
+                    "gain": 0.08526735850722839,
+                    "children": [
+                      {
+                        "value": "Normal",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "0",
+                          "count": 19,
+                          "classCounts": {
+                            "0": 19
+                          }
+                        }
+                      },
+                      {
+                        "value": "ST",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 5.551115123125783e-17,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 5.551115123125783e-17,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 5,
+                                      "classCounts": {
+                                        "0": 4,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 4,
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 4,
+                            "1": 1
+                          }
+                        }
+                      },
+                      {
+                        "value": "LVH",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "0",
+                          "count": 10,
+                          "classCounts": {
+                            "0": 10
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 33,
+                      "1": 1
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 97,
+                "1": 8
+              }
+            }
+          },
+          {
+            "value": "TA",
+            "subtree": {
+              "type": "node",
+              "feature": "Sex",
+              "gain": 0.143108528744693,
+              "children": [
+                {
+                  "value": "F",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "0",
+                    "count": 7,
+                    "classCounts": {
+                      "0": 7
+                    }
+                  }
+                },
+                {
+                  "value": "M",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "FastingBS",
+                    "gain": 0.12324791321663814,
+                    "children": [
+                      {
+                        "value": "0",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ExerciseAngina",
+                          "gain": 0.07290559532005603,
+                          "children": [
+                            {
+                              "value": "N",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.06127812445913289,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "ST",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "0": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 2,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 6,
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "Y",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 2,
+                                "classCounts": {
+                                  "0": 2
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 8,
+                            "1": 2
+                          }
+                        }
+                      },
+                      {
+                        "value": "1",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "RestingECG",
+                          "gain": 0.9182958340544896,
+                          "children": [
+                            {
+                              "value": "Normal",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "1",
+                                "count": 2,
+                                "classCounts": {
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "ST",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 1,
+                                "classCounts": {
+                                  "0": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 1,
+                            "1": 2
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 9,
+                      "1": 4
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 16,
+                "1": 4
+              }
+            }
+          },
+          {
+            "value": "ASY",
+            "subtree": {
+              "type": "node",
+              "feature": "ExerciseAngina",
+              "gain": 0.10577937336771806,
+              "children": [
+                {
+                  "value": "N",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "FastingBS",
+                    "gain": 0.11700426989421113,
+                    "children": [
+                      {
+                        "value": "0",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "RestingECG",
+                          "gain": 0.08169864406163535,
+                          "children": [
+                            {
+                              "value": "Normal",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 0.06189618196409796,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 35,
+                                      "classCounts": {
+                                        "0": 27,
+                                        "1": 8
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 8,
+                                      "classCounts": {
+                                        "0": 8
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 35,
+                                  "1": 8
+                                }
+                              }
+                            },
+                            {
+                              "value": "ST",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 0.030477722406731633,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 10,
+                                      "classCounts": {
+                                        "0": 9,
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 3
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 12,
+                                  "1": 1
+                                }
+                              }
+                            },
+                            {
+                              "value": "LVH",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 0.013182168842508502,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 11,
+                                      "classCounts": {
+                                        "0": 5,
+                                        "1": 6
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 5,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 8,
+                                  "1": 8
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 55,
+                            "1": 17
+                          }
+                        }
+                      },
+                      {
+                        "value": "1",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "RestingECG",
+                          "gain": 0.21995640169091463,
+                          "children": [
+                            {
+                              "value": "ST",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 5.551115123125783e-17,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 5,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 4
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 4
+                                }
+                              }
+                            },
+                            {
+                              "value": "Normal",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 0.02008994082044896,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 8,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 7
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 8
+                                }
+                              }
+                            },
+                            {
+                              "value": "LVH",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 0.12255624891826566,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 2,
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "0": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 3,
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 5,
+                            "1": 13
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 60,
+                      "1": 30
+                    }
+                  }
+                },
+                {
+                  "value": "Y",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "FastingBS",
+                    "gain": 0.04492601616196046,
+                    "children": [
+                      {
+                        "value": "1",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "RestingECG",
+                          "gain": 0.06297794600548685,
+                          "children": [
+                            {
+                              "value": "Normal",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "Sex",
+                                "gain": 0.03451070288373825,
+                                "children": [
+                                  {
+                                    "value": "M",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 6,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 5
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "F",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 6
+                                }
+                              }
+                            },
+                            {
+                              "value": "ST",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "1",
+                                "count": 1,
+                                "classCounts": {
+                                  "1": 1
+                                }
+                              }
+                            },
+                            {
+                              "value": "LVH",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "1",
+                                "count": 3,
+                                "classCounts": {
+                                  "1": 3
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 1,
+                            "1": 10
+                          }
+                        }
+                      },
+                      {
+                        "value": "0",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "Sex",
+                          "gain": 0.1122372843361264,
+                          "children": [
+                            {
+                              "value": "M",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.004797394384627146,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 10,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 7
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "ST",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 10,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 7
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 9,
+                                      "classCounts": {
+                                        "0": 2,
+                                        "1": 7
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 8,
+                                  "1": 21
+                                }
+                              }
+                            },
+                            {
+                              "value": "F",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 2,
+                                "classCounts": {
+                                  "0": 2
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 10,
+                            "1": 21
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 11,
+                      "1": 31
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 71,
+                "1": 61
+              }
+            }
+          }
+        ],
+        "classCounts": {
+          "0": 317,
+          "1": 78
+        }
+      }
+    },
+    {
+      "value": "Flat",
+      "subtree": {
+        "type": "node",
+        "feature": "Sex",
+        "gain": 0.07615991421265506,
+        "children": [
+          {
+            "value": "F",
+            "subtree": {
+              "type": "node",
+              "feature": "FastingBS",
+              "gain": 0.13944341684551237,
+              "children": [
+                {
+                  "value": "0",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "ExerciseAngina",
+                    "gain": 0.16420417413359406,
+                    "children": [
+                      {
+                        "value": "N",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ChestPainType",
+                          "gain": 0.06704333678357893,
+                          "children": [
+                            {
+                              "value": "NAP",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.08522410996133051,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 10,
+                                      "classCounts": {
+                                        "0": 8,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 4
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "ST",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "0": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 13,
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "ATA",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.0025652873671377086,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 5,
+                                      "classCounts": {
+                                        "0": 4,
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 7,
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "ASY",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.000589596275060833,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 5,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 7,
+                                      "classCounts": {
+                                        "0": 4,
+                                        "1": 3
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 7,
+                                  "1": 5
+                                }
+                              }
+                            },
+                            {
+                              "value": "TA",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 1,
+                                "classCounts": {
+                                  "0": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 28,
+                            "1": 9
+                          }
+                        }
+                      },
+                      {
+                        "value": "Y",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ChestPainType",
+                          "gain": 0.04523673779346152,
+                          "children": [
+                            {
+                              "value": "ASY",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.07338962915193391,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 16,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 13
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "ST",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 2,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 2,
+                                        "1": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 7,
+                                  "1": 17
+                                }
+                              }
+                            },
+                            {
+                              "value": "NAP",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "1",
+                                "count": 2,
+                                "classCounts": {
+                                  "1": 2
+                                }
+                              }
+                            },
+                            {
+                              "value": "ATA",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 8,
+                            "1": 20
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 36,
+                      "1": 29
+                    }
+                  }
+                },
+                {
+                  "value": "1",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "1",
+                    "count": 10,
+                    "classCounts": {
+                      "1": 10
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 36,
+                "1": 39
+              }
+            }
+          },
+          {
+            "value": "M",
+            "subtree": {
+              "type": "node",
+              "feature": "ChestPainType",
+              "gain": 0.05319186721021231,
+              "children": [
+                {
+                  "value": "ASY",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "FastingBS",
+                    "gain": 0.030349614307528694,
+                    "children": [
+                      {
+                        "value": "0",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ExerciseAngina",
+                          "gain": 0.005898327528781375,
+                          "children": [
+                            {
+                              "value": "Y",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.004064108540310446,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 84,
+                                      "classCounts": {
+                                        "0": 5,
+                                        "1": 79
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "ST",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 31,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 28
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 25,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 24
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 9,
+                                  "1": 131
+                                }
+                              }
+                            },
+                            {
+                              "value": "N",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "RestingECG",
+                                "gain": 0.014683253370378069,
+                                "children": [
+                                  {
+                                    "value": "Normal",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 36,
+                                      "classCounts": {
+                                        "0": 4,
+                                        "1": 32
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "ST",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "LVH",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 10,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 9
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 6,
+                                  "1": 43
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 15,
+                            "1": 174
+                          }
+                        }
+                      },
+                      {
+                        "value": "1",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "1",
+                          "count": 85,
+                          "classCounts": {
+                            "1": 85
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 15,
+                      "1": 259
+                    }
+                  }
+                },
+                {
+                  "value": "ATA",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "RestingECG",
+                    "gain": 0.14866639820232797,
+                    "children": [
+                      {
+                        "value": "ST",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "1",
+                          "count": 5,
+                          "classCounts": {
+                            "1": 5
+                          }
+                        }
+                      },
+                      {
+                        "value": "Normal",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ExerciseAngina",
+                          "gain": 0.10434897109477179,
+                          "children": [
+                            {
+                              "value": "N",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0.12808527889139448,
+                                "children": [
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 6,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 3
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "1",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "0": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 4,
+                                  "1": 3
+                                }
+                              }
+                            },
+                            {
+                              "value": "Y",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0.1709505944546686,
+                                "children": [
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "1",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "1": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 4
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 5,
+                            "1": 7
+                          }
+                        }
+                      },
+                      {
+                        "value": "LVH",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ExerciseAngina",
+                          "gain": 0.12255624891826566,
+                          "children": [
+                            {
+                              "value": "Y",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "1",
+                                "count": 1,
+                                "classCounts": {
+                                  "1": 1
+                                }
+                              }
+                            },
+                            {
+                              "value": "N",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0,
+                                "children": [
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 2
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 1,
+                            "1": 3
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 6,
+                      "1": 15
+                    }
+                  }
+                },
+                {
+                  "value": "NAP",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "RestingECG",
+                    "gain": 0.04574152950561436,
+                    "children": [
+                      {
+                        "value": "Normal",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.006866221943283887,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0.009314107504742652,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 11,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 8
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 17,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 14
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 6,
+                                  "1": 22
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0.2935644431995964,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 6,
+                                      "classCounts": {
+                                        "1": 6
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 7
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 7,
+                            "1": 29
+                          }
+                        }
+                      },
+                      {
+                        "value": "ST",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ExerciseAngina",
+                          "gain": 0.008759293005954155,
+                          "children": [
+                            {
+                              "value": "N",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0.10917033867559894,
+                                "children": [
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "1",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 3
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 5
+                                }
+                              }
+                            },
+                            {
+                              "value": "Y",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0.06297794600548685,
+                                "children": [
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 7,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 6
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "1",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "1": 4
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 10
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 2,
+                            "1": 15
+                          }
+                        }
+                      },
+                      {
+                        "value": "LVH",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ExerciseAngina",
+                          "gain": 0.03377993635367643,
+                          "children": [
+                            {
+                              "value": "N",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0.10803154614560001,
+                                "children": [
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 9,
+                                      "classCounts": {
+                                        "0": 4,
+                                        "1": 5
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "1",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "0": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 5,
+                                  "1": 5
+                                }
+                              }
+                            },
+                            {
+                              "value": "Y",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0.005977711423773874,
+                                "children": [
+                                  {
+                                    "value": "1",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 3
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 2,
+                                  "1": 5
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 7,
+                            "1": 10
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 16,
+                      "1": 54
+                    }
+                  }
+                },
+                {
+                  "value": "TA",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "RestingECG",
+                    "gain": 0.21788089502365413,
+                    "children": [
+                      {
+                        "value": "ST",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "1",
+                          "count": 3,
+                          "classCounts": {
+                            "1": 3
+                          }
+                        }
+                      },
+                      {
+                        "value": "Normal",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.19920350542916282,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "1",
+                                "count": 5,
+                                "classCounts": {
+                                  "1": 5
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0.251629167387823,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 1,
+                                      "classCounts": {
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 2
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 1,
+                            "1": 7
+                          }
+                        }
+                      },
+                      {
+                        "value": "LVH",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "ExerciseAngina",
+                          "gain": 0.10218717094933338,
+                          "children": [
+                            {
+                              "value": "N",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0.04879494069539858,
+                                "children": [
+                                  {
+                                    "value": "1",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 3,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 2
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 5,
+                                      "classCounts": {
+                                        "0": 3,
+                                        "1": 2
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 4,
+                                  "1": 4
+                                }
+                              }
+                            },
+                            {
+                              "value": "Y",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 1,
+                                "classCounts": {
+                                  "0": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 5,
+                            "1": 4
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 6,
+                      "1": 14
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 43,
+                "1": 342
+              }
+            }
+          }
+        ],
+        "classCounts": {
+          "0": 79,
+          "1": 381
+        }
+      }
+    },
+    {
+      "value": "Down",
+      "subtree": {
+        "type": "node",
+        "feature": "ChestPainType",
+        "gain": 0.19902167758933995,
+        "children": [
+          {
+            "value": "ASY",
+            "subtree": {
+              "type": "node",
+              "feature": "RestingECG",
+              "gain": 0.037532711499732724,
+              "children": [
+                {
+                  "value": "ST",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "ExerciseAngina",
+                    "gain": 0.2576788051033315,
+                    "children": [
+                      {
+                        "value": "Y",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "1",
+                          "count": 9,
+                          "classCounts": {
+                            "1": 9
+                          }
+                        }
+                      },
+                      {
+                        "value": "N",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "Sex",
+                          "gain": 0,
+                          "children": [
+                            {
+                              "value": "M",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "FastingBS",
+                                "gain": 0,
+                                "children": [
+                                  {
+                                    "value": "0",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 1,
+                            "1": 1
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 1,
+                      "1": 10
+                    }
+                  }
+                },
+                {
+                  "value": "Normal",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "FastingBS",
+                    "gain": 0.018123229899188853,
+                    "children": [
+                      {
+                        "value": "1",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "Sex",
+                          "gain": 0.027740167559621443,
+                          "children": [
+                            {
+                              "value": "M",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0.007403392114696705,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 4,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 3
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 6,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 5
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 2,
+                                  "1": 8
+                                }
+                              }
+                            },
+                            {
+                              "value": "F",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "1",
+                                "count": 1,
+                                "classCounts": {
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 2,
+                            "1": 9
+                          }
+                        }
+                      },
+                      {
+                        "value": "0",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "Sex",
+                          "gain": 1.3877787807814457e-17,
+                          "children": [
+                            {
+                              "value": "M",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 1.3877787807814457e-17,
+                                "children": [
+                                  {
+                                    "value": "Y",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "0",
+                                      "count": 13,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 12
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 12
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 1,
+                            "1": 12
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 3,
+                      "1": 21
+                    }
+                  }
+                },
+                {
+                  "value": "LVH",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "1",
+                    "count": 11,
+                    "classCounts": {
+                      "1": 11
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 4,
+                "1": 42
+              }
+            }
+          },
+          {
+            "value": "ATA",
+            "subtree": {
+              "type": "node",
+              "feature": "RestingECG",
+              "gain": 0.251629167387823,
+              "children": [
+                {
+                  "value": "ST",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "0",
+                    "count": 1,
+                    "classCounts": {
+                      "0": 1
+                    }
+                  }
+                },
+                {
+                  "value": "Normal",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "Sex",
+                    "gain": 0,
+                    "children": [
+                      {
+                        "value": "M",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 1,
+                            "1": 1
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 1,
+                      "1": 1
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 2,
+                "1": 1
+              }
+            }
+          },
+          {
+            "value": "NAP",
+            "subtree": {
+              "type": "node",
+              "feature": "RestingECG",
+              "gain": 0.27548875021634694,
+              "children": [
+                {
+                  "value": "Normal",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "ExerciseAngina",
+                    "gain": 1,
+                    "children": [
+                      {
+                        "value": "Y",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "1",
+                          "count": 2,
+                          "classCounts": {
+                            "1": 2
+                          }
+                        }
+                      },
+                      {
+                        "value": "N",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "0",
+                          "count": 2,
+                          "classCounts": {
+                            "0": 2
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 2,
+                      "1": 2
+                    }
+                  }
+                },
+                {
+                  "value": "ST",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "1",
+                    "count": 2,
+                    "classCounts": {
+                      "1": 2
+                    }
+                  }
+                },
+                {
+                  "value": "LVH",
+                  "subtree": {
+                    "type": "node",
+                    "feature": "Sex",
+                    "gain": 0.12255624891826566,
+                    "children": [
+                      {
+                        "value": "M",
+                        "subtree": {
+                          "type": "node",
+                          "feature": "FastingBS",
+                          "gain": 0.251629167387823,
+                          "children": [
+                            {
+                              "value": "0",
+                              "subtree": {
+                                "type": "node",
+                                "feature": "ExerciseAngina",
+                                "gain": 0,
+                                "children": [
+                                  {
+                                    "value": "N",
+                                    "subtree": {
+                                      "type": "leaf",
+                                      "class": "1",
+                                      "count": 2,
+                                      "classCounts": {
+                                        "0": 1,
+                                        "1": 1
+                                      }
+                                    }
+                                  }
+                                ],
+                                "classCounts": {
+                                  "0": 1,
+                                  "1": 1
+                                }
+                              }
+                            },
+                            {
+                              "value": "1",
+                              "subtree": {
+                                "type": "leaf",
+                                "class": "0",
+                                "count": 1,
+                                "classCounts": {
+                                  "0": 1
+                                }
+                              }
+                            }
+                          ],
+                          "classCounts": {
+                            "0": 2,
+                            "1": 1
+                          }
+                        }
+                      },
+                      {
+                        "value": "F",
+                        "subtree": {
+                          "type": "leaf",
+                          "class": "0",
+                          "count": 1,
+                          "classCounts": {
+                            "0": 1
+                          }
+                        }
+                      }
+                    ],
+                    "classCounts": {
+                      "0": 3,
+                      "1": 1
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 5,
+                "1": 5
+              }
+            }
+          },
+          {
+            "value": "TA",
+            "subtree": {
+              "type": "node",
+              "feature": "RestingECG",
+              "gain": 0.8112781244591328,
+              "children": [
+                {
+                  "value": "ST",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "1",
+                    "count": 1,
+                    "classCounts": {
+                      "1": 1
+                    }
+                  }
+                },
+                {
+                  "value": "LVH",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "0",
+                    "count": 2,
+                    "classCounts": {
+                      "0": 2
+                    }
+                  }
+                },
+                {
+                  "value": "Normal",
+                  "subtree": {
+                    "type": "leaf",
+                    "class": "0",
+                    "count": 1,
+                    "classCounts": {
+                      "0": 1
+                    }
+                  }
+                }
+              ],
+              "classCounts": {
+                "0": 3,
+                "1": 1
+              }
+            }
+          }
+        ],
+        "classCounts": {
+          "0": 14,
+          "1": 49
+        }
+      }
+    }
+  ],
+  "classCounts": {
+    "0": 410,
+    "1": 508
+  }
+}

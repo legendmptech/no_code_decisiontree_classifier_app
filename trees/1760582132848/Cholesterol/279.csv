@@ -1,0 +1,2 @@
+Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak,ST_Slope,HeartDisease
+56,F,ATA,120,279,0,Normal,150,N,1,Flat,1

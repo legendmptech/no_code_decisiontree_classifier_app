@@ -1,0 +1,158 @@
+{
+    "class": {
+        "category": [
+            "unacc",
+            "acc",
+            "vgood",
+            "good"
+        ],
+        "count": {
+            "unacc": 1210,
+            "acc": 384,
+            "vgood": 65,
+            "good": 69
+        }
+    },
+    "feature": {
+        "name": [
+            "buy_cost",
+            "maintainance_cost",
+            "lug_boot",
+            "safety"
+        ],
+        "buy_cost": {
+            "category": [
+                "vhigh",
+                "high",
+                "med",
+                "low"
+            ],
+            "count": {
+                "vhigh": 432,
+                "high": 432,
+                "med": 432,
+                "low": 432
+            }
+        },
+        "maintainance_cost": {
+            "category": [
+                "vhigh",
+                "high",
+                "med",
+                "low"
+            ],
+            "count": {
+                "vhigh": 432,
+                "high": 432,
+                "med": 432,
+                "low": 432
+            }
+        },
+        "lug_boot": {
+            "category": [
+                "small",
+                "med",
+                "big"
+            ],
+            "count": {
+                "small": 576,
+                "med": 576,
+                "big": 576
+            }
+        },
+        "safety": {
+            "category": [
+                "low",
+                "med",
+                "high"
+            ],
+            "count": {
+                "low": 576,
+                "med": 576,
+                "high": 576
+            }
+        }
+    },
+    "attr_data": {
+        "buy_cost": {
+            "vhigh": {
+                "unacc": 360,
+                "acc": 72
+            },
+            "high": {
+                "unacc": 324,
+                "acc": 108
+            },
+            "med": {
+                "unacc": 268,
+                "acc": 115,
+                "vgood": 26,
+                "good": 23
+            },
+            "low": {
+                "unacc": 258,
+                "acc": 89,
+                "vgood": 39,
+                "good": 46
+            }
+        },
+        "maintainance_cost": {
+            "vhigh": {
+                "unacc": 360,
+                "acc": 72
+            },
+            "high": {
+                "unacc": 314,
+                "acc": 105,
+                "vgood": 13
+            },
+            "med": {
+                "unacc": 268,
+                "acc": 115,
+                "vgood": 26,
+                "good": 23
+            },
+            "low": {
+                "unacc": 268,
+                "acc": 92,
+                "good": 46,
+                "vgood": 26
+            }
+        },
+        "lug_boot": {
+            "small": {
+                "unacc": 450,
+                "acc": 105,
+                "good": 21
+            },
+            "med": {
+                "unacc": 392,
+                "acc": 135,
+                "vgood": 25,
+                "good": 24
+            },
+            "big": {
+                "unacc": 368,
+                "acc": 144,
+                "vgood": 40,
+                "good": 24
+            }
+        },
+        "safety": {
+            "low": {
+                "unacc": 576
+            },
+            "med": {
+                "unacc": 357,
+                "acc": 180,
+                "good": 39
+            },
+            "high": {
+                "unacc": 277,
+                "acc": 204,
+                "vgood": 65,
+                "good": 30
+            }
+        }
+    }
+}

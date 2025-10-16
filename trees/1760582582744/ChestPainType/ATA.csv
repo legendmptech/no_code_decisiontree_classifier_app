@@ -1,0 +1,4 @@
+Sex,ChestPainType,FastingBS,RestingECG,ExerciseAngina,HeartDisease
+M,ATA,0,ST,N,0
+M,ATA,0,Normal,N,1
+M,ATA,0,Normal,N,0

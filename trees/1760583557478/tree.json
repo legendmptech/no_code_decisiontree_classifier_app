@@ -1,0 +1,94 @@
+{
+  "type": "node",
+  "feature": "Outlook",
+  "gain": 0.24674981977443894,
+  "children": [
+    {
+      "value": "Sunny",
+      "subtree": {
+        "type": "node",
+        "feature": "Humidity",
+        "gain": 0.9709505944546686,
+        "children": [
+          {
+            "value": "High",
+            "subtree": {
+              "type": "leaf",
+              "class": "No",
+              "count": 3,
+              "classCounts": {
+                "No": 3
+              }
+            }
+          },
+          {
+            "value": "Normal",
+            "subtree": {
+              "type": "leaf",
+              "class": "Yes",
+              "count": 2,
+              "classCounts": {
+                "Yes": 2
+              }
+            }
+          }
+        ],
+        "classCounts": {
+          "No": 3,
+          "Yes": 2
+        }
+      }
+    },
+    {
+      "value": "Overcast",
+      "subtree": {
+        "type": "leaf",
+        "class": "Yes",
+        "count": 4,
+        "classCounts": {
+          "Yes": 4
+        }
+      }
+    },
+    {
+      "value": "Rain",
+      "subtree": {
+        "type": "node",
+        "feature": "Wind",
+        "gain": 0.9709505944546686,
+        "children": [
+          {
+            "value": "Weak",
+            "subtree": {
+              "type": "leaf",
+              "class": "Yes",
+              "count": 3,
+              "classCounts": {
+                "Yes": 3
+              }
+            }
+          },
+          {
+            "value": "Strong",
+            "subtree": {
+              "type": "leaf",
+              "class": "No",
+              "count": 2,
+              "classCounts": {
+                "No": 2
+              }
+            }
+          }
+        ],
+        "classCounts": {
+          "Yes": 3,
+          "No": 2
+        }
+      }
+    }
+  ],
+  "classCounts": {
+    "No": 5,
+    "Yes": 9
+  }
+}

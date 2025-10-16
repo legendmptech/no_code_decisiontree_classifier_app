@@ -1,0 +1,11 @@
+Sex,ChestPainType,FastingBS,RestingECG,ExerciseAngina,HeartDisease
+M,NAP,0,Normal,Y,1
+M,NAP,0,Normal,Y,1
+M,NAP,1,ST,N,1
+M,NAP,1,ST,Y,1
+M,NAP,0,LVH,N,1
+M,NAP,0,LVH,N,0
+F,NAP,0,LVH,Y,0
+M,NAP,1,LVH,N,0
+M,NAP,1,Normal,N,0
+M,NAP,0,Normal,N,0

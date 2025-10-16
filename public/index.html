@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No-Code Decision Tree Classifier</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <i class="fas fa-project-diagram"></i>
+                <span>Decision Tree Classifier</span>
+            </div>
+            <div class="navbar-tabs">
+                <button class="tab-btn active" data-tab="uploadTab"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
+                <button class="tab-btn" data-tab="dataTab"><i class="fas fa-table"></i> Data</button>
+                <button class="tab-btn" data-tab="treeTab"><i class="fas fa-project-diagram"></i> Tree</button>
+                <button class="tab-btn" data-tab="predictTab"><i class="fas fa-magic"></i> Predict</button>
+            </div>
+        </nav>
+        
+        <div class="main-content">
+
+            <div class="tab-pane active" id="uploadTab">
+            <div class="upload-section" id="uploadSection">
+                <div class="upload-form">
+                    <h3><i class="fas fa-cloud-upload-alt"></i> Upload Your CSV File</h3>
+                    <p>Drag and drop your CSV file here or click to browse</p>
+                    
+                    <div class="file-input-wrapper">
+                        <input type="file" id="csvFile" class="file-input" accept=".csv" />
+                        <label for="csvFile" class="file-input-button">
+                            <i class="fas fa-file-csv"></i>
+                            Choose CSV File
+                        </label>
+                    </div>
+                    
+                    <div class="file-info" id="fileInfo">
+                        <i class="fas fa-file"></i>
+                        <span id="fileName"></span>
+                        <span id="fileSize"></span>
+                    </div>
+                    
+                    <div style="margin: 20px 0;">
+                        <label for="modelName" style="display: block; margin-bottom: 8px; font-weight: 600; color: #495057;">Model Name:</label>
+                        <input type="text" id="modelName" placeholder="Enter model name (e.g., Weather Prediction Model)" 
+                               style="width: 100%; padding: 12px; border: 1px solid #dee2e6; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <button class="upload-btn" id="uploadBtn" disabled>
+                        <i class="fas fa-upload"></i>
+                        Upload & Analyze
+                    </button>
+                    
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Processing your CSV file...</p>
+            </div>
+            
+            <div id="messageContainer"></div>
+            </div>
+
+            <div class="tab-pane" id="dataTab">
+                <div class="results-header">
+                    <h3><i class="fas fa-table"></i> Data Preview</h3>
+                    <div>
+                        <label style="font-weight:600;margin-right:8px">Your Models:</label>
+                        <select id="modelSelect" style="padding:8px;border:1px solid #dee2e6;border-radius:8px"></select>
+                        <button class="tab-btn" id="loadModelBtn"><i class="fas fa-download"></i> Load</button>
+                    </div>
+                </div>
+                <div class="results-content">
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead id="tableHead"></thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                    <div style="padding:12px;color:#6c757d" id="dataMeta"></div>
+                    <div id="paginationControls" style="padding: 12px; text-align: center; border-top: 1px solid #dee2e6;">
+                        <button id="prevPageBtn" class="tab-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                        <span id="pageInfo" style="margin: 0 15px; font-weight: 600;"></span>
+                        <button id="nextPageBtn" class="tab-btn"><i class="fas fa-chevron-right"></i> Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="treeTab">
+                <div class="results-header">
+                    <h3><i class="fas fa-project-diagram"></i> Decision Tree</h3>
+                    <div>
+                        <button id="collapseAllBtn" class="tab-btn" style="background: #dc3545; color: white; border: none;">
+                            <i class="fas fa-compress"></i> Collapse All
+                        </button>
+                    </div>
+                </div>
+                <div id="treeContainer">
+                    <svg id="treeSvg" width="100%" height="100%"></svg>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="predictTab">
+                <div class="results-header">
+                    <h3><i class="fas fa-magic"></i> Predict New Data Point</h3>
+                </div>
+                <div class="upload-section">
+                    <div style="margin-bottom:10px">
+                        <label style="font-weight:600;margin-right:8px">Choose Model:</label>
+                        <select id="predictModelSelect" style="padding:8px;border:1px solid #dee2e6;border-radius:8px"></select>
+                    </div>
+                    <form id="predictForm"></form>
+                    <button class="upload-btn" id="predictBtn" disabled>
+                        <i class="fas fa-bolt"></i> Predict
+                    </button>
+                    <div style="margin-top:12px" id="predictResult"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
