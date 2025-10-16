@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let pageSize = 50;
     let allTableData = null;
 
-    // Tabs
-    document.querySelectorAll('.tab-btn').forEach(btn => {
+    // Tabs (only buttons that actually represent tabs)
+    document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
         btn.addEventListener('click', () => {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-btn[data-tab]').forEach(b => b.classList.remove('active'));
             document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
             btn.classList.add('active');
             document.getElementById(btn.dataset.tab).classList.add('active');
@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(progressInterval);
             progressFill.style.width = '100%';
 
-            const result = await response.json();
+            const result = await safeParseJson(response);
 
-            if (response.ok && result.success) {
+            if (response.ok && result && result.success) {
                 showMessage(`Model "${result.modelName}" created successfully!`, 'success');
                 latestMeta = result.meta || null;
                 featureCategories = result.meta?.featureCategories || {};
@@ -177,7 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 buildPredictForm(latestMeta);
                 refreshModelSelectors();
             } else {
-                showMessage(result.error || 'Error processing CSV file', 'error');
+                const errMsg = (result && (result.error || result.details)) ? `${result.error}${result.details ? ': ' + result.details : ''}` : 'Error processing CSV file';
+                showMessage(errMsg, 'error');
             }
         } catch (error) {
             clearInterval(progressInterval);
@@ -188,6 +189,19 @@ document.addEventListener('DOMContentLoaded', () => {
             progressBar.style.display = 'none';
             progressFill.style.width = '0%';
             uploadBtn.disabled = false;
+        }
+    }
+
+    async function safeParseJson(response){
+        try{
+            return await response.json();
+        }catch{
+            try{
+                const text = await response.text();
+                return { error: text };
+            }catch{
+                return { error: 'Unknown server error' };
+            }
         }
     }
 
@@ -249,9 +263,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function activateTab(id){
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-btn[data-tab]').forEach(b => b.classList.remove('active'));
         document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-        const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b=>b.dataset.tab===id);
+        const btn = Array.from(document.querySelectorAll('.tab-btn[data-tab]')).find(b=>b.dataset.tab===id);
         if(btn) btn.classList.add('active');
         const pane = document.getElementById(id);
         if(pane) pane.classList.add('active');
@@ -293,7 +307,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if(res.ok && json.success){
                 const probs = json.result.probabilities || {};
                 const entries = Object.entries(probs).sort((a,b)=>b[1]-a[1]);
-                predictResult.innerHTML = entries.map(([k,v])=> `${k}: ${(v*100).toFixed(2)}%`).join('<br/>');
+                const unseenBadge = json.result.unseen ? '<div class="error-message" style="margin-top:8px">Some input values were not seen during training. Using parent node probabilities.</div>' : '';
+                predictResult.innerHTML = entries.map(([k,v])=> `${k}: ${(v*100).toFixed(2)}%`).join('<br/>') + unseenBadge;
             } else {
                 predictResult.innerHTML = '<div class="error-message">Prediction failed.</div>';
             }
@@ -302,24 +317,96 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Load selected model id and render its tree
-    loadModelBtn && loadModelBtn.addEventListener('click', async ()=>{
-        const id = modelSelect && modelSelect.value;
+    // Load selected model: fetch tree+meta+table and update UI
+    async function loadModel(id){
         if(!id) return;
         try{
-            const res = await fetch(`/api/tree/${id}`);
+            // Show loading/progress while fetching model
+            if (uploadBtn) uploadBtn.disabled = true; // prevent accidental uploads during load
+            if (predictBtn) predictBtn.disabled = true;
+            hideMessage();
+            predictResult.innerHTML = '';
+            loading.style.display = 'block';
+            progressBar.style.display = 'block';
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                progress += Math.random() * 25;
+                if (progress > 90) progress = 90;
+                progressFill.style.width = progress + '%';
+            }, 200);
+
+            const res = await fetch(`/api/model/${id}`);
             const json = await res.json();
             if(res.ok && json.success){
                 currentModelId = id;
                 saveModelId(id);
+                lastTree = json.tree;
                 renderTree(json.tree);
-                activateTab('treeTab');
+                // Update meta and categories for predict form
+                const meta = json.meta || {};
+                latestMeta = {
+                    featureNames: meta.featureNames || meta?.options?.featureNames || [],
+                    featureCategories: meta.featureCategories || {}
+                };
+                // Fallback: derive from tree when meta is missing/legacy
+                if ((!latestMeta.featureNames || latestMeta.featureNames.length === 0) ||
+                    (!latestMeta.featureCategories || Object.keys(latestMeta.featureCategories).length === 0)) {
+                    const derived = deriveFeatureInfoFromTree(json.tree);
+                    latestMeta.featureNames = derived.featureNames;
+                    latestMeta.featureCategories = derived.featureCategories;
+                }
+                featureCategories = latestMeta.featureCategories || {};
+                buildPredictForm(latestMeta);
+                // Update table preview if available
+                if(json.table){
+                    allTableData = json.table;
+                    renderTablePage();
+                }
             } else {
-                showMessage('Selected model could not be loaded. Ensure its tree.json exists.', 'error');
+                showMessage('Selected model could not be loaded. Ensure its files exist.', 'error');
             }
+            clearInterval(progressInterval);
+            progressFill.style.width = '100%';
         } catch(err){
             showMessage('Failed to load selected model.', 'error');
+        } finally {
+            // Hide loading state
+            loading.style.display = 'none';
+            progressBar.style.display = 'none';
+            progressFill.style.width = '0%';
+            if (uploadBtn) uploadBtn.disabled = false;
+            if (predictBtn) predictBtn.disabled = false;
         }
+    }
+
+    // Derive feature names and categories from saved tree.json (for legacy models)
+    function deriveFeatureInfoFromTree(tree){
+        const featureCategoriesMap = {};
+        function walk(node){
+            if(!node || node.type === 'leaf') return;
+            const feat = node.feature;
+            if(!featureCategoriesMap[feat]) featureCategoriesMap[feat] = new Set();
+            (node.children||[]).forEach(ch=>{
+                featureCategoriesMap[feat].add(String(ch.value));
+                walk(ch.subtree);
+            });
+        }
+        walk(tree);
+        const featureNames = Object.keys(featureCategoriesMap);
+        const featureCategories = {};
+        featureNames.forEach(name=> featureCategories[name] = Array.from(featureCategoriesMap[name]||[]));
+        return { featureNames, featureCategories };
+    }
+
+    loadModelBtn && loadModelBtn.addEventListener('click', ()=> {
+        const id = modelSelect && modelSelect.value; 
+        if (predictModelSelect) predictModelSelect.value = id; 
+        loadModel(id);
+    });
+    predictModelSelect && predictModelSelect.addEventListener('change', ()=> {
+        const id = predictModelSelect.value;
+        if (modelSelect) modelSelect.value = id;
+        loadModel(id);
     });
 
     function saveModelId(id){
@@ -346,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .append('g')
             .attr('transform', 'translate(50,50)');
 
-        // Transform server tree into hierarchy for D3
+        // Transform server tree into hierarchy for D3 (Feature -> Category -> Next Feature/Leaf)
         function toHierarchy(node, depth = 0) {
             if (!node) return { name: 'empty', depth };
             if (node.type === 'leaf') {
@@ -361,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
             }
             
-            // Create intermediate feature node
+            // Create feature node
             const featureNode = {
                 name: node.feature || 'root',
                 depth,
@@ -371,14 +458,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 children: []
             };
             
-            // Add feature categories as children
+            // For each category, insert a category node, then attach transformed subtree under it
             const children = (node.children || []).map(ch => {
-                const child = toHierarchy(ch.subtree, depth + 2); // Skip one level for feature categories
-                child.name = `${ch.value}`;
-                child.parentFeature = node.feature;
-                child.originalNode = ch.subtree;
-                child.isFeatureCategory = true;
-                return child;
+                const subtree = toHierarchy(ch.subtree, depth + 2);
+                const categoryNode = {
+                    name: `${ch.value}`,
+                    depth: depth + 1,
+                    isLeaf: false,
+                    isCategory: true,
+                    parentFeature: node.feature,
+                    originalNode: ch,
+                    children: [subtree]
+                };
+                return categoryNode;
             });
             
             featureNode.children = children;

@@ -84,6 +84,18 @@ export function buildDataObject(records) {
     return data;
 }
 
+function getMajorityClass(counts) {
+    let best = null;
+    let bestCount = -1;
+    for (const [k, v] of Object.entries(counts || {})) {
+        if (v > bestCount) {
+            best = k;
+            bestCount = v;
+        }
+    }
+    return best;
+}
+
 function ensureDir(dirPath) {
     if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath, { recursive: true });
@@ -124,6 +136,10 @@ function removeFeatureFromRecords(records, featureName) {
 export function buildDecisionTree(records, options = {}) {
     const id = options.id || String(Date.now());
     const baseDir = options.baseDir || path.join(process.cwd(), "trees", id);
+    const depth = options.depth || 0;
+    const maxDepth = Number.isFinite(options.maxDepth) ? options.maxDepth : Infinity;
+    const minSamplesSplit = Number.isFinite(options.minSamplesSplit) ? options.minSamplesSplit : 2;
+    const minGain = Number.isFinite(options.minGain) ? options.minGain : -Infinity;
     ensureDir(baseDir);
 
     const dataObj = buildDataObject(records);
@@ -132,8 +148,13 @@ export function buildDecisionTree(records, options = {}) {
     // Base cases: pure or no features left
     const headers = records[0] ? Object.keys(records[0]) : [];
     const classCol = headers[headers.length - 1];
-    if (isPure(records) || dataObj.feature.name.length === 0) {
-        const leafClass = records[0] ? records[0][classCol] : undefined;
+    if (
+        isPure(records) ||
+        dataObj.feature.name.length === 0 ||
+        depth >= maxDepth ||
+        records.length < minSamplesSplit
+    ) {
+        const leafClass = getMajorityClass(classCounts) ?? (records[0] ? records[0][classCol] : undefined);
         return { type: "leaf", class: leafClass, count: records.length, classCounts };
     }
 
@@ -148,9 +169,9 @@ export function buildDecisionTree(records, options = {}) {
             bestFeature = fname;
         }
     }
-    if (!bestFeature) {
-        const leafClass = records[0] ? records[0][classCol] : undefined;
-        return { type: "leaf", class: leafClass, count: records.length };
+    if (!bestFeature || bestGain < minGain) {
+        const leafClass = getMajorityClass(classCounts) ?? (records[0] ? records[0][classCol] : undefined);
+        return { type: "leaf", class: leafClass, count: records.length, classCounts };
     }
 
     const node = { type: "node", feature: bestFeature, gain: bestGain, children: [], classCounts };
@@ -173,7 +194,7 @@ export function buildDecisionTree(records, options = {}) {
 
         // Recurse with feature removed
         const reduced = removeFeatureFromRecords(subset, bestFeature);
-        const childTree = buildDecisionTree(reduced, { id, baseDir });
+        const childTree = buildDecisionTree(reduced, { id, baseDir, depth: depth + 1, maxDepth, minSamplesSplit, minGain });
         node.children.push({ value: cat, subtree: childTree });
     });
 
@@ -187,10 +208,11 @@ export function buildDecisionTree(records, options = {}) {
 // Predict by traversing the stored tree; return class probabilities at the reached node
 export function predictWithTree(tree, features) {
     let node = tree;
+    let unseen = false;
     while (node && node.type === 'node') {
         const value = features[node.feature];
         const child = (node.children || []).find(ch => String(ch.value) === String(value));
-        if (!child) break; // unknown category, stop at current node
+        if (!child) { unseen = true; break; }
         node = child.subtree;
     }
     const counts = node && node.classCounts ? node.classCounts : {};
@@ -202,5 +224,5 @@ export function predictWithTree(tree, features) {
     for (const [k, p] of Object.entries(probabilities)) {
         if (p > bestP) { best = k; bestP = p; }
     }
-    return { nodeType: node?.type || 'node', class: node?.class, probabilities, mostLikely: best };
+    return { nodeType: node?.type || 'node', class: node?.class, probabilities, mostLikely: best, unseen };
 }
