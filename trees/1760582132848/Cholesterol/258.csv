@@ -1,8 +1,0 @@
-Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak,ST_Slope,HeartDisease
-62,M,TA,112,258,0,ST,150,Y,1.3,Flat,1
-74,M,ASY,150,258,1,ST,130,Y,4,Down,1
-64,M,ASY,130,258,1,LVH,130,N,0,Flat,1
-51,F,ASY,114,258,1,LVH,96,N,1,Up,0
-60,F,ASY,150,258,0,LVH,157,N,2.6,Flat,1
-60,M,ASY,125,258,0,LVH,141,Y,2.8,Flat,1
-54,M,NAP,120,258,0,LVH,147,N,0.4,Flat,0
