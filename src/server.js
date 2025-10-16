@@ -6,7 +6,7 @@ import path from "path";
 import fs from "fs";
 
 const app = express();
-const PORT = 3000;
+const PORT = 3007;
 
 // Ensure uploads directory exists and configure multer with limits
 const uploadDir = path.join(process.cwd(), 'uploads');
